@@ -11,7 +11,7 @@ public:
 
             }
             ans_fin.push_back(ans);
-            
+            return;
         }
         else{
             check[ind]=1;

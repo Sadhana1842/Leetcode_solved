@@ -6,10 +6,14 @@ public:
             return;
         }
         if(open<n){
-            solve(n,ans_fin,ans+"(",open+1,close);
+            ans=ans+"(";
+            solve(n,ans_fin,ans,open+1,close);
+            ans.pop_back();
         }
         if(open>close){
-            solve(n,ans_fin,ans+")",open,close+1);
+            ans=ans+")";
+            solve(n,ans_fin,ans,open,close+1);
+            ans.pop_back();
         }
     }
     vector<string> generateParenthesis(int n) {

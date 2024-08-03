@@ -13,7 +13,8 @@ public:
             // While the current window's sum is greater than or equal to target
             while (sum >= target) {
                 minLength = min(minLength, right - left + 1); // Update minimum length
-                sum -= nums[left++]; // Shrink the window by removing nums[left]
+                sum -= nums[left]; // Shrink the window by removing nums[left]
+                left++;
             }
         }
 
